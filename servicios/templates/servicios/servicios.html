@@ -1,0 +1,27 @@
+{% extends "soulcoffeeApp/index.html" %}
+
+{% load static %}
+
+{% block content %} 
+
+  {% for servicio  in servicios %}
+
+  
+  <section class="servicios">
+    <div class="contenedor">
+        <div class="servicio-ind">
+          <img class="imagen" src="{{servicio.imagen.url}}" alt="" width="200" height="200">
+          <div class="contenedor-servicios">
+            <h3>{{servicio.titulo}}</h3>
+          <p>{{servicio.contenido}}</p>
+          </div>
+          
+        </div>
+      
+    </div>
+  </section>
+
+
+  {% endfor%}
+
+{% endblock %}

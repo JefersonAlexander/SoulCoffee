@@ -1,0 +1,11 @@
+migracion se deben de hacer los registros de los modelos en el admin de cad app
+python manage.py makemigrations
+python manage.py migrate
+
+createsuperuser
+python manage.py createsuperuser
+yefer
+
+python manage.py runserver
+
+python manage.py startapp carroCompras

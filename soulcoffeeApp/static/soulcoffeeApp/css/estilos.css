@@ -1,0 +1,13 @@
+* {
+    margin:  0;
+    padding: 0;
+  }  
+
+.imagen{
+  width: 20%;
+}
+
+#navbar{
+  background-color: aqua;
+}
+  
