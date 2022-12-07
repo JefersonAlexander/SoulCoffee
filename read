@@ -9,3 +9,8 @@ yefer
 python manage.py runserver
 
 python manage.py startapp carroCompras
+
+
+git add .
+git commit -m "first commit" 
+

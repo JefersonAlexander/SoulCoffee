@@ -3,25 +3,27 @@
 {% load static %}
 
 {% block content %} 
+<div class="container" >
+
+  <div class="row">
 
   {% for servicio  in servicios %}
 
   
-  <section class="servicios">
-    <div class="contenedor">
-        <div class="servicio-ind">
-          <img class="imagen" src="{{servicio.imagen.url}}" alt="" width="200" height="200">
-          <div class="contenedor-servicios">
-            <h3>{{servicio.titulo}}</h3>
-          <p>{{servicio.contenido}}</p>
+      <div class="col-md-6">
+        
+          <div class="card" style="width: 18rem; display:flex;" >
+            <img class="card-img-top" src="{{servicio.imagen.url}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{servicio.titulo}}</h5>
+              <p class="card-text">{{servicio.contenido}}</p>
+            </div>
           </div>
-          
-        </div>
-      
-    </div>
-  </section>
-
+      </div>
+  
 
   {% endfor%}
+   </div> 
+</div>
 
 {% endblock %}

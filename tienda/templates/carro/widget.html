@@ -15,33 +15,46 @@
 
     <tbody>
         {% if request.session.carro.items %}
-           {% for key, value in request.sessin.carro.items %}
 
-            <st class="text-center"> 
+            {% for key, value in request.session.carro.items %}
+
+              <tr class="text-center">
+
                 <td>{{value.nombre}}</td>
                 <td>{{value.cantidad}}</td>
-                <td> 
-                    <a href="{% url 'carro:agregar' value.producto_id %}" class="btn btn-sm btn-success"> +</a>
-                    <a href="{% url 'carro:restar' value.producto_id %}" class="btn btn-sm btn-success"> - </a>
+                <td>
 
-                    {{value.precio}} $
-                   
+                    <a href="{% url 'carro:agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>
+                    <a href="{% url 'carro:restar' value.producto_id %}" class="btn btn-sm btn-success">-</a>
+                    <br/>
+
+                    {{value.precio}} €
+
                 </td>
-                
-            </st>
 
-           {% endfor%}
-        {%else%}  
-           <tr>
-              <td colspan="3"> 
-                <div class="alert alert-danger text-center">
-                    Sin productos
-                </div>
-              </td>
-           </tr>
-        {% endif%}
+              </tr>  
+            {% endfor %}
 
+            {% else %}
+
+            <tr>
+
+                <td colspan="3">
+                    <div class="alert alert-danger text-center">
+
+                        Sin productos
+                    </div>
+                </td>
+
+
+            </tr>
+
+
+
+            {% endif %}
     </tbody>
+
+    
 
     <tfoot>
         <tr>
